@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+    $(function(){
+        $("#hilang").click(function(){
+            $("div").fadeOut(3000);
+        });
+        $("#muncul").click(function(){
+            $("div").fadeIn();
+        });
+        $("#toggle").click(function(){
+            $("div").toggle(2000);
+        });
+        $("#fadeto").click(function(){
+            $("div").fadeTo(1000, 0.5);
+        });
+        $("#slideup").click(function(){
+            $("div").slideUp('slow');
+        });
+        $("#slidedown").click(function(){
+            $("div").slideDown('slow');
+        });
+        $("#slidetoggle").click(function(){
+            $("div").slideToggle(2000);
+        });
+        $("#animate_kanan").click(function(){
+            $("div").animate({
+                left : '+=250px'
+            });
+        });
+        $("#animate_kiri").click(function(){
+            $("div").animate({
+                left : '-=250px',
+            });
+        });
+        $("#animate_bawah").click(function(){
+            $("div").animate({
+                top : '+=250px'
+            });
+        });
+        $("#animate_atas").click(function(){
+            $("div").animate({
+                top : '-=250px',
+            });
+        });
+        $("#removeclass").click(function(){
+            $("button").removeClass("btn");
+        });
+        $("#makeclass").click(function(){
+            $("button").addClass("btn");
+        });
+        $("button").addClass("btn");
+    });
+    </script>
+</head>
+
+<style>
+    .btn {
+        background: orange;
+        color: white;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <button id="hilang">Hilang</button>
+    <button id="muncul">Muncul</button>
+    <button id="toggle">Toggle</button>
+    <button id="fadeto">fadeTo</button>
+    <button id="slideup">Slide Up</button>
+    <button id="slidedown">Slide Down</button>
+    <button id="slidetoggle">Slide Toggle</button>
+    <br><br>
+    <div style="background : blue; width: 50px; height: 50px"></div><br>
+    <div style="background : red; width: 50px; height: 50px"></div><br>
+    <div style="background : yellow; width: 50px; height: 50px"></div><br>
+    <hr>
+
+    <button id="animate_kanan">Kanan</button>
+    <button id="animate_kiri">Kiri</button>
+    <button id="animate_bawah">Bawah</button>
+    <button id="animate_atas">Atas</button>
+    <br><br>
+    <div style="background : #999; width: 50px; height: 50px; position: absolute;"></div>
+    <br><br><br><br>
+    <button id="removeclass">Remove Class</button>
+    <button id="makeclass">Make Class</button>
+</body>
+</html>
